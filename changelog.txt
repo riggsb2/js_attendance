@@ -1,0 +1,12 @@
+## TODO: Make it prettier
+## TODO: Add security layer
+
+2024XX v0.1.00
+- ## TODO: Setup SQL resource that logs attendance
+- ## TODO: Setup dynamic table to read from SQL table
+- ## TODO: Setup submission from page to SQL table
+
+20240404 v0.0.01
+- Setup initial home page
+- Setup dynamic table call
+- Setup submission of radio attendance

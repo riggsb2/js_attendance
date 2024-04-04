@@ -1,0 +1,74 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Attendance</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <div class="container", id="container">
+    <h1 id="title"> </h1>
+    <script>;
+      // Get current date and time
+      var n = new Date();
+      var y = n.getFullYear();
+      var m = n.getMonth() + 1;
+      var d = n.getDate();
+      var str_date = m + "/" + d + "/" + y;
+      document.getElementById("title").innerHTML = `Attendance for ${str_date}`;
+    </script>
+
+    <script>;
+      // use function get to grab table data
+      const data = ['Kevin', 'Jake', 'Brian', 'Jim', 'Cliff', 'Blaise'];
+
+      var table = document.createElement('table'),
+        tr, td, row, cell;
+      table.border="1"
+      table.id="Attendance_table"
+
+      // Construct the header
+      tr = document.createElement('tr');
+      th = document.createElement('th');
+      th.innerHTML = "In Class";
+      tr.appendChild(th);
+      th = document.createElement('th');
+      th.innerHTML = "Name";
+      tr.appendChild(th);
+      table.appendChild(tr);
+
+      for (var name of data) {
+        // create a row tag
+        tr = document.createElement('tr');
+        let checkbox = document.createElement('input')
+        // create a column tag
+        td = document.createElement('td');
+        checkbox.type = "checkbox";
+        td.name='checkbox'
+        td.appendChild(checkbox);
+
+        tr.appendChild(td);
+        // create a column tag
+        td = document.createElement('td');
+        td.innerHTML = name;
+
+        tr.appendChild(td);
+        
+        // append the row tag to the table
+        tr.id = name
+        table.appendChild(tr);
+      }
+      document.getElementById('container').appendChild(table);
+
+    </script>
+
+<button onclick="submit()">Submit Sheet</button>
+
+</body>
+</html>
